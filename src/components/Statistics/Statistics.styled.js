@@ -4,7 +4,7 @@ export const StatisticsSection = styled.section`
   margin: 0 auto;
   margin-bottom: 40px;
   background-color: #fff;
-  overflow: hidden;  
+  overflow: hidden;
   background-color: #fff;
   box-shadow: 10px 10px 20px rgb(150, 150, 150);
 `;

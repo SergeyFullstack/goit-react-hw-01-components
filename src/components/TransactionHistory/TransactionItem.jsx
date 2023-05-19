@@ -12,7 +12,6 @@ export const TransactionItem = ({ items }) => {
   });
 };
 
-
 TransactionItem.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.exact({
@@ -21,5 +20,5 @@ TransactionItem.propTypes = {
       amount: PropTypes.string.isRequired,
       currency: PropTypes.string.isRequired,
     })
-  )
+  ),
 };

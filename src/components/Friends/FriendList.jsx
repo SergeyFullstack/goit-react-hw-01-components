@@ -1,12 +1,5 @@
-
-
-
-
-
 import { FriendListWrap } from 'components/Friends/Friend.styled';
 import { FriendItem } from 'components/Friends/FriendItem';
-
-
 
 export const FriendList = ({ friends }) => {
   return (
@@ -15,10 +8,3 @@ export const FriendList = ({ friends }) => {
     </FriendListWrap>
   );
 };
-
-
-
-
-
-
-

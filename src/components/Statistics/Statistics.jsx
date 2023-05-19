@@ -11,9 +11,7 @@ export const Statistics = ({ title, stats }) => {
     <StatisticsSection>
       <StatisticsTitle>{title}</StatisticsTitle>
 
-      <StatisticsList>
-       {<StatisticsItem stats={stats} />}
-      </StatisticsList>
+      <StatisticsList>{<StatisticsItem stats={stats} />}</StatisticsList>
     </StatisticsSection>
   );
 };
@@ -21,4 +19,3 @@ export const Statistics = ({ title, stats }) => {
 Statistics.propTypes = {
   title: PropTypes.string,
 };
-

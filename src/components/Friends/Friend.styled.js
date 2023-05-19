@@ -11,7 +11,6 @@ export const FriendItemStyle = styled.li`
   align-items: center;
   padding: 8px 20px;
 
-  
   background-color: #fff;
   box-shadow: 10px 10px 20px rgb(150, 150, 150);
 

@@ -9,8 +9,14 @@ import {
   StatsList,
 } from 'components/Profile/Profile.styled';
 
-export const Profile = ({ username, tag, avatar, location, stats: {followers, views, likes } }) => {
-    return (  
+export const Profile = ({
+  username,
+  tag,
+  avatar,
+  location,
+  stats: { followers, views, likes },
+}) => {
+  return (
     <ProfileWrap>
       <div>
         <Avatar src={avatar} alt="User avatar" />

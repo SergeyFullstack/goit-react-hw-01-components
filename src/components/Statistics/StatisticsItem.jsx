@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { StatisticsItemStyle } from 'components/Statistics/Statistics.styled';
 
 export const StatisticsItem = ({ stats }) => {
-  return stats.map(({id, label, percentage}) => {
+  return stats.map(({ id, label, percentage }) => {
     return (
       <StatisticsItemStyle key={id} backgrounds={getRandomHexColor()}>
         <span>{label}</span>
