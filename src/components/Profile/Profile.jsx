@@ -9,7 +9,7 @@ import {
   StatsList,
 } from 'components/Profile/Profile.styled';
 
-export const Profile = ({ username, tag, avatar, location, stats }) => {
+export const Profile = ({ username, tag, avatar, location, stats: {followers, views, likes } }) => {
     return (  
     <ProfileWrap>
       <div>
@@ -22,15 +22,15 @@ export const Profile = ({ username, tag, avatar, location, stats }) => {
       <StatsList>
         <StatsItem>
           <span>Followers</span>
-          <StatsInfo>{stats.followers}</StatsInfo>
+          <StatsInfo>{followers}</StatsInfo>
         </StatsItem>
         <StatsItem>
           <span>Views</span>
-          <StatsInfo>{stats.views}</StatsInfo>
+          <StatsInfo>{views}</StatsInfo>
         </StatsItem>
         <StatsItem>
           <span>Likes</span>
-          <StatsInfo>{stats.likes}</StatsInfo>
+          <StatsInfo>{likes}</StatsInfo>
         </StatsItem>
       </StatsList>
     </ProfileWrap>
@@ -42,5 +42,9 @@ Profile.propTypes = {
   tag: PropTypes.string,
   location: PropTypes.string,
   avatar: PropTypes.string,
-  stats: PropTypes.objectOf(PropTypes.number),
+  stats: PropTypes.exact({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+  }),
 };
