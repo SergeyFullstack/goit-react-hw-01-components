@@ -14,12 +14,11 @@ export const TransactionHistoryTable = styled.table`
     background-color: #00b5ff;
     color: #fff;
   }
-  tr {
-  }
 
   th {
     padding: 10px 0;
   }
+
   th:not(:last-child) {
     border-right: solid 2px rgb(224, 224, 224);
   }

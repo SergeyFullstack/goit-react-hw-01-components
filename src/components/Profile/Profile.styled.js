@@ -61,6 +61,7 @@ export const StatsItem = styled.li`
     margin-bottom: 5px;
   }
 `;
+
 export const StatsInfo = styled.span`
   font-weight: bold;
 `;
