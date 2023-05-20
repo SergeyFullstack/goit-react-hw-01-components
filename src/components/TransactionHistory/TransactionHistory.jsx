@@ -3,7 +3,7 @@ import {
   TransactionHistoryTable,
   TransactionHistoryTbody,
 } from 'components/TransactionHistory/TransactionHistory.styled';
-import { TransactionItem } from 'components/TransactionHistory/TransactionItem';
+
 
 export const TransactionHistory = ({ transactions }) => {
   return (
@@ -15,16 +15,34 @@ export const TransactionHistory = ({ transactions }) => {
           <th>Currency</th>
         </tr>
       </thead>
-
-      <TransactionHistoryTbody>
+         <TransactionHistoryTbody>
         <TransactionItem items={transactions} />
       </TransactionHistoryTbody>
     </TransactionHistoryTable>
   );
 };
 
-TransactionItem.propTypes = {
-  transactions: PropTypes.arrayOf(
-    PropTypes.objectOf(PropTypes.string.isRequired)
-  ),
+const TransactionItem = ({ items }) => {
+  return items.map(transaction => {
+    const {id, type, amount, currency} = transaction
+    return (
+      <tr key={id}>
+        <td>{type}</td>
+        <td>{amount}</td>
+        <td>{currency}</td>
+      </tr>
+    );
+  });
+};
+
+
+TransactionHistory.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+    }).isRequired
+  ).isRequired,
 };
